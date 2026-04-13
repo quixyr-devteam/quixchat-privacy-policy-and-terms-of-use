@@ -260,7 +260,7 @@ This Privacy Policy is therefore written to be globally structured and privacy-f
 
 ## 14. Children
 
-Quix Chat is not intended for children under 13.
+Quix Chat is not intended for user under 16 years old of age.
 
 For users under the age required to form a binding agreement or to consent to data processing in their jurisdiction, use may be limited or require parent or legal guardian authorization where permitted by law.
 

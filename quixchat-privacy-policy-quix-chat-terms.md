@@ -2,7 +2,7 @@
 <br><br>
 # Quix Chat Privacy Policy
 
-<small>Version PP-2026-04-13_v01</small>
+<sub>Version PP-2026-04-13_v01</sub>
 
 Effective date: April 13, 2026
 Last updated: April 13, 2026

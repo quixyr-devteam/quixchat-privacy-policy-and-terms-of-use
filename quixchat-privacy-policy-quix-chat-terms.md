@@ -2,7 +2,7 @@
 <br><br>
 # Quix Chat Privacy Policy
 
-### Version PP-2026-04-13_v01
+<small>Version PP-2026-04-13_v01</small>
 
 Effective date: April 13, 2026
 Last updated: April 13, 2026
@@ -385,7 +385,7 @@ These Terms and the Privacy Policy are provided in English. Translations may be 
 
 # Quix Chat Terms of Use
 
-### Version TOU-2026-04-13_v01
+<small>Version TOU-2026-04-13_v01</small>
 
 Effective date: April 13, 2026
 Last updated: April 13, 2026

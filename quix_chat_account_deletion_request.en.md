@@ -1,7 +1,7 @@
 # Quix Chat Account and Data Deletion Requests
 
-Effective date: [Insert effective date]  
-Last updated: [Insert last updated date]
+Effective date: April 13, 2025 
+Last updated: April 13, 2025 
 
 Use this page to request deletion of your Quix Chat account and associated personal data.
 
@@ -18,10 +18,9 @@ This is the fastest and most reliable method because it verifies account ownersh
 
 ## Can’t Access the App? Submit a Web Request
 
-If you cannot sign in, you can still request deletion using either route below.
+If you cannot sign in, you can still request deletion using the route below.
 
-- Email: `mailto:[Insert privacy email]?subject=Quix%20Chat%20Account%20Deletion%20Request`
-- Request form URL: `[Insert public deletion request form URL]`
+- Email: `security@quixyr.com`
 
 In your request, include:
 
@@ -30,7 +29,7 @@ In your request, include:
 - your country/region;
 - a statement that you want account deletion.
 
-For security, we may request additional verification (for example, verification tied to your phone number) before deleting the account.
+For security, we will request additional verification (for example, verification tied to your phone number, OTP verification) before deleting the account.
 
 ## What Happens After a Valid Request
 
@@ -54,6 +53,5 @@ Quix Chat aims to complete verified deletion requests without undue delay. Some 
 
 ## Contact
 
-- Privacy email: `[Insert privacy email]`
-- Legal address: `[Insert legal address]`
-- Support URL: `[Insert support URL]`
+- Privacy email: `security@quixyr.com`
+- Support: `support@quixyr.com`

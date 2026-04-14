@@ -49,7 +49,7 @@ Quix Chat aims to complete verified deletion requests without undue delay. Some 
 
 ## Related Policy
 
-- [Quix Chat Privacy Policy](/Users/geeraardmcm/flutter_project_vscode/quix_chat/docs/legal/quix_chat_privacy_policy.en.md)
+- [Quix Chat Privacy Policy](https://github.com/quixyr-devteam/quixchat-privacy-policy-and-terms-of-use/blob/main/quixchat-privacy-policy-quix-chat-terms.md)
 
 ## Contact
 

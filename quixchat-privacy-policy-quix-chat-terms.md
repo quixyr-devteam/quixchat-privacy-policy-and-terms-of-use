@@ -1,11 +1,12 @@
 # QUIX CHAT PRIVACY POLICY AND QUIX CHAT TERMS OF USE
 <br><br>
 # Quix Chat Privacy Policy
-<sub>Version PP-2026-04-13_v01</sub>
+<sub>Version PP-2026-05-01_v01</sub>
 
 <br>
-Effective date: April 13, 2026
-Last updated: April 13, 2026
+Effective date: May 1, 2026
+Last updated: May 1, 2026
+
 
 This Privacy Policy explains how Quix Chat processes personal data when you use the Quix Chat mobile application, related websites, support channels, and backend services (together, the "Services").
 
@@ -150,7 +151,72 @@ Depending on your region, device platform, and consent choices, Quix Chat may re
 
 We do not use the content of your messages, calls, voice messages, or attachments to personalize advertising.
 
-## 7. How We Use Personal Data
+## 7. Safety, Moderation, and Prohibited Content
+
+Quix Chat includes user-generated content, private messaging, groups, avatars, profile fields, and related metadata. We use safety and moderation controls to reduce abuse, support legal compliance, and protect users.
+
+### 7.1 Prohibited content and conduct
+
+You may not use Quix Chat to create, share, organize, request, promote, or facilitate content or conduct that is illegal or prohibited under our Terms, including:
+
+- child sexual abuse material, child exploitation, or grooming-related activity;
+- trafficking, exploitation, coercion, or abuse;
+- illegal sexual content or non-consensual intimate imagery;
+- violent threats or violent extremist content;
+- illegal sales, including drugs, weapons, or other unlawful goods or services;
+- impersonation, scam activity, fraud, spam, or coordinated abuse.
+
+Violations may result in immediate content restriction, group removal, account suspension, account termination, or other enforcement action.
+
+### 7.2 Server-readable metadata filtering
+
+Quix Chat applies proactive filtering to server-readable user-generated surfaces. Depending on product state and feature rollout, this may include:
+
+- account or member display names;
+- group names;
+- room or subgroup names;
+- group descriptions;
+- other server-readable metadata fields that we determine require safety review.
+
+When filtering rules are triggered, Quix Chat may block the attempted save, log the event for abuse-prevention or moderation purposes, and require the user to choose different content before continuing.
+
+### 7.3 Encrypted direct-message distinction
+
+Quix Chat is designed so that supported direct-message bodies, encrypted attachments, and encrypted voice messages are encrypted on the client before backend storage. Because those encrypted direct-message bodies are not server-readable by design, Quix Chat does not rely on the same proactive server-side text filtering model for that content as it does for server-readable metadata.
+
+Instead, private direct-message safety is supported through:
+
+- consent-based contact and pairing flows;
+- user blocking controls;
+- reporting flows that allow users to submit screenshots or other evidence;
+- moderation review and account or group enforcement when reports are validated;
+- backend logging and enforcement for safety events such as blocks, reports, and related actions.
+
+This distinction does not mean private abuse is permitted. It reflects the product’s encryption model and the technical limits that follow from it.
+
+### 7.4 Group entry acknowledgements
+
+In some group-join flows, Quix Chat may require users to acknowledge that they will not post, generate, or share illegal or exploitative content before they are allowed to join the group. We may log that acknowledgement with the group, user, policy version, and acceptance timestamp.
+
+### 7.5 Reporting, blocking, and moderation review
+
+Quix Chat may process moderation-related data when users block other users, report users, report groups, or submit moderation evidence. This may include:
+
+- reporter and reported user or group identifiers;
+- timestamps, case numbers, and moderation status;
+- screenshots or other evidence uploaded with a report;
+- immutable report-time snapshots of relevant account, contact, or group metadata;
+- moderation event logs, reviewer actions, and enforcement history.
+
+We aim to review objectionable-content reports promptly and, where required by platform policy or law, act within applicable response windows. In appropriate cases, Quix Chat may remove content, restrict a group, suspend an account, or terminate an account without prior notice.
+
+### 7.6 Moderation retention
+
+Moderation evidence and related safety records may be retained for up to 28 days after a case is closed, or longer where necessary for legal obligations, fraud prevention, abuse prevention, audits, dispute handling, law-enforcement requests, or an active legal hold.
+
+If a report results in account or group enforcement, certain related records may be retained longer where reasonably necessary to document the action taken, prevent repeat abuse, or comply with law.
+
+## 8. How We Use Personal Data
 
 We use personal data to:
 
@@ -167,7 +233,7 @@ We use personal data to:
 
 We do not need to place ads inside direct message threads in order to monetize the service, and Quix Chat is designed to keep that boundary.
 
-## 8. Legal Bases
+## 9. Legal Bases
 
 Depending on your jurisdiction, we rely on one or more of the following legal bases:
 
@@ -179,7 +245,7 @@ Depending on your jurisdiction, we rely on one or more of the following legal ba
 
 For users in the EEA or UK, if and when Quix Chat launches there, we will provide additional region-specific disclosures identifying the specific lawful bases we rely on for each relevant category of processing.
 
-## 9. Sharing of Personal Data
+## 10. Sharing of Personal Data
 
 We may share personal data with:
 
@@ -193,7 +259,7 @@ We may share personal data with:
 
 Quix Chat does not position itself as part of a large cross-service social advertising ecosystem. Compared with Meta-operated WhatsApp, Quix Chat is designed to keep data sharing narrower and product-specific. Compared with Telegram’s cloud-chat model, Quix Chat is designed to keep direct message content encrypted before backend storage rather than relying on server-readable cloud chats as the default private-chat model.
 
-## 10. International Transfers
+## 11. International Transfers
 
 Quix Chat uses regional infrastructure and may transfer data across borders where necessary to operate the Services, maintain security, or support users.
 
@@ -207,7 +273,7 @@ For territories with transfer restrictions, we intend to use appropriate safegua
 - access controls and encryption;
 - internal transfer governance.
 
-## 11. Retention
+## 12. Retention
 
 We retain data only for as long as reasonably necessary for the purposes described in this Privacy Policy, including:
 
@@ -239,7 +305,11 @@ Quix Chat already includes product-level features intended to support these righ
 - notification and privacy choices;
 - backend-controlled ad and consent behavior.
 
-## 13. Privacy Laws Quix Chat Is Structured to Support
+Account deletion request instructions (including an off-app request route) are published here:
+
+- [Quix Chat Account and Data Deletion Requests](https://github.com/quixyr-devteam/quixchat-privacy-policy-and-terms-of-use/blob/main/quix_chat_account_deletion_request.en.md)
+
+## 14. Privacy Laws Quix Chat Is Structured to Support
 
 Quix Chat is designed to support the practical requirements commonly associated with:
 
@@ -260,7 +330,7 @@ For the EEA, Quix Chat is not yet launched. That is deliberate. Before EEA launc
 
 This Privacy Policy is therefore written to be globally structured and privacy-forward, but EEA availability is deferred until the EEA-specific legal work is complete.
 
-## 14. Children
+## 15. Children
 
 Quix Chat is not intended for user under 16 years old of age.
 
@@ -270,7 +340,7 @@ Certain future features, including unmoderated or publicly accessible chat envir
 
 If you believe a child provided personal data in violation of this policy, contact us so we can investigate and take appropriate action.
 
-## 15. Security
+## 16. Security
 
 We use technical and organizational safeguards appropriate to the risk, including:
 
@@ -286,11 +356,11 @@ We also implement safeguards designed to minimize unnecessary access to sensitiv
 
 No system can guarantee absolute security. You are responsible for securing your device, account access, SIM/phone number, recovery key, and any backups or screenshots you make.
 
-## 16. Changes to this Privacy Policy
+## 17. Changes to this Privacy Policy
 
 We may update this Privacy Policy from time to time. If we make material changes, we may notify users through the app, the website, or other reasonable channels. The "Effective date" above will reflect the latest version.
 
-## 16A. App Platform Requirements and Permissions
+## 17A. App Platform Requirements and Permissions
 
 Quix Chat is distributed through third-party application platforms such as the Apple App Store and Google Play. These platforms may impose additional requirements regarding privacy, data use, user-generated content, and user permissions.
 
@@ -303,7 +373,7 @@ Quix Chat:
 
 You may also review platform-specific privacy disclosures provided by Apple or Google in connection with your device or account.
 
-## 17. Contact and Complaints
+## 18. Contact and Complaints
 
 To contact us about privacy, data requests, or complaints:
 
@@ -313,7 +383,7 @@ To contact us about privacy, data requests, or complaints:
 
 If local law gives you the right to complain to a supervisory authority or data protection regulator, you may do so.
 
-## 17A. Data Requests and Account Controls (DSAR)
+## 18A. Data Requests and Account Controls (DSAR)
 
 Quix Chat provides mechanisms for users to manage their data and submit privacy-related requests.
 
@@ -342,6 +412,10 @@ To submit a data request:
 
 We may require verification of your identity before fulfilling certain requests in order to protect account security and the rights of others.
 
+Account deletion request instructions (including an off-app request route) are published here:
+
+- [Quix Chat Account and Data Deletion Requests](https://github.com/quixyr-devteam/quixchat-privacy-policy-and-terms-of-use/blob/main/quix_chat_account_deletion_request.en.md)
+
 ### Response Timing
 
 We aim to respond to valid requests within a reasonable timeframe. Where applicable law sets specific deadlines, we will seek to comply with those deadlines.
@@ -356,7 +430,7 @@ Some requests may be limited where:
 
 Where appropriate, we will explain the basis for any limitation.
 
-## 17B. European Economic Area (EEA) and United Kingdom
+## 18B. European Economic Area (EEA) and United Kingdom
 
 If and when Quix Chat becomes available in the EEA or the United Kingdom, additional terms and disclosures will apply to users in those regions.
 

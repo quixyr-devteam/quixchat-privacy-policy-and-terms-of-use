@@ -1,6 +1,7 @@
 # Quix Chat Account and Data Deletion Requests
 
 Effective date: April 13, 2025 
+
 Last updated: April 13, 2025 
 
 Use this page to request deletion of your Quix Chat account and associated personal data.

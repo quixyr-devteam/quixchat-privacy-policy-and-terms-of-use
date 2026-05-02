@@ -459,7 +459,7 @@ These Terms and the Privacy Policy are provided in English. Translations may be 
 <br><br><br>
 
 # Quix Chat Terms of Use
-<sub>Version TOU-2026-04-13_v01</sub>
+<sub>Version TOU-2026-04-13_v01 r1</sub>
 
 <br>
 Effective date: April 13, 2026

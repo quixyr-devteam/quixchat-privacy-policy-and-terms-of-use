@@ -308,7 +308,7 @@ Quix Chat already includes product-level features intended to support these righ
 
 Account deletion request instructions (including an off-app request route) are published here:
 
-- [Quix Chat Account and Data Deletion Requests](https://github.com/quixyr-devteam/quixchat-privacy-policy-and-terms-of-use/blob/main/quix_chat_account_deletion_request.en.md)
+- [Quix Chat Account and Data Deletion Requests](https://quixyr-devteam.github.io/quix_chat_account_deletion_request/)
 
 ## 14. Privacy Laws Quix Chat Is Structured to Support
 
@@ -415,7 +415,7 @@ We may require verification of your identity before fulfilling certain requests 
 
 Account deletion request instructions (including an off-app request route) are published here:
 
-- [Quix Chat Account and Data Deletion Requests](https://github.com/quixyr-devteam/quixchat-privacy-policy-and-terms-of-use/blob/main/quix_chat_account_deletion_request.en.md)
+- [Quix Chat Account and Data Deletion Requests](https://quixyr-devteam.github.io/quix_chat_account_deletion_request/)
 
 ### Response Timing
 

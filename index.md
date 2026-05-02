@@ -463,6 +463,7 @@ These Terms and the Privacy Policy are provided in English. Translations may be 
 
 <br>
 Effective date: April 13, 2026
+
 Last updated: April 13, 2026
 
 These Terms of Use ("Terms") govern your access to and use of Quix Chat and related services, software, and features (the "Services").

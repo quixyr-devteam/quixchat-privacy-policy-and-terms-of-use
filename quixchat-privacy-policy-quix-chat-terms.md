@@ -1,17 +1,17 @@
 # QUIX CHAT PRIVACY POLICY AND QUIX CHAT TERMS OF USE
 <br><br>
 # Quix Chat Privacy Policy
-<sub>Version PP-2026-05-01_v01 r2</sub>
+<sub>Version PP-2026-07-20_v01</sub>
 
 <br>
-Effective date: May 1, 2026
+Effective date: July 20, 2026
 
-Last updated: May 1, 2026
+Last updated: July 20, 2026
 
 
 This Privacy Policy explains how Quix Chat processes personal data when you use the Quix Chat mobile application, related websites, support channels, and backend services (together, the "Services").
 
-Quix Chat is a privacy-first messaging product built around phone-number sign-in, device trust, encrypted direct messaging, encrypted attachments and voice messages, optional voice and video calling, groups, subgroups, and backend-controlled advertising surfaces outside core message threads.
+Quix Chat is a privacy-first messaging product built around email-based sign-in, device trust, encrypted direct messaging, encrypted attachments and voice messages, optional voice and video calling, groups, subgroups, broadcast-style Station channels, ephemeral Global Chat rooms, group polls, and backend-controlled advertising surfaces outside core message threads.
 
 If you have questions about this Privacy Policy, contact:
 
@@ -24,12 +24,14 @@ If you have questions about this Privacy Policy, contact:
 
 This Privacy Policy applies to:
 
-- account registration and sign-in using phone-based OTP authentication;
-- direct chats, groups, subgroups, voice messages, voice calls, and video calls;
-- contact discovery, pairing, and device-trust features;
+- account registration and sign-in using email-based one-time-password (OTP) authentication;
+- direct chats, groups, subgroups, broadcast-style Station channels (including Station video posts), ephemeral Global Chat rooms, group polls, voice messages, voice calls, and video calls;
+- contact discovery and pairing, including link-based contact and group joining, multi-slot contact re-pairing, and device-trust features;
 - support requests, privacy requests, and account deletion or transfer workflows;
 - optional advertising placements, if enabled;
 - related operational, security, and compliance processing.
+
+Quix Chat previously supported phone-number-based OTP sign-in and account recovery. That functionality has been fully retired and is no longer present in the app; all accounts now register, sign in, and recover access using email.
 
 This Privacy Policy does not govern third-party services you choose to use separately from Quix Chat, such as your mobile carrier, the Apple App Store, Google Play, device backup providers, external payment providers, or third-party websites opened from links inside the app. Those services have their own terms and privacy notices.
 
@@ -37,13 +39,14 @@ This Privacy Policy does not govern third-party services you choose to use separ
 
 Quix Chat is designed to reduce unnecessary data exposure:
 
-- direct message content is encrypted on the client before storage on the server;
-- attachments and voice messages are encrypted locally before upload;
+- direct message content, and content stored in the optional private storage feature, is encrypted on the client using keys the backend does not hold, before storage on the server;
+- attachments and voice messages sent in direct chats are encrypted locally before upload;
+- group chats, subgroups, and Station channels (including Station video posts and their attachments) are also encrypted before storage, but use a conversation-derived key rather than a key private to the two participants; this content is not end-to-end encrypted in the same sense as direct messages, and Quix Chat discloses this distinction in the app itself;
+- Global Chat rooms are ephemeral and are not stored on our servers at all; messages are relayed in real time and are not persisted server-side beyond the session;
 - device trust and recovery-key flows are used to control access to encrypted conversation data;
-- ads are configured to stay outside core direct message threads;
+- ads are configured to stay outside core message threads, including group and Station message threads;
 - runtime flags allow us to disable sensitive features or ad placements from the backend without forcing an app update;
-- phone numbers are used for authentication and security purposes, but are not visible to other users and cannot be used by other users to search for your account within the service;
-- internal identifiers such as UUIDs are used for service operations wherever possible instead of using phone numbers as general-purpose identifiers.
+- accounts are registered and authenticated using email; internal identifiers such as UUIDs are used for service operations wherever possible instead of using contact or authentication details as general-purpose identifiers.
 
 Quix Chat is not currently launched for the European Economic Area ("EEA"). We are preparing EEA launch separately so that GDPR-specific documentation, regional governance, transfer controls, vendor terms, and compliance operations are complete before rollout.
 
@@ -53,15 +56,19 @@ Quix Chat is not currently launched for the European Economic Area ("EEA"). We a
 
 We may collect:
 
-- your phone number for authentication, account recovery, and security purposes;
+- your email address for authentication, account recovery, and security purposes;
 - profile information such as display name, avatar, about text, language choice, and notification preferences;
 - contact labels you assign inside the app;
-- content you choose to send through the Services, including messages, reactions, replies, group participation, attachments, and voice-message content, which may be stored in encrypted form where applicable;
+- content you choose to send through the Services, including messages, reactions, replies, group and Station participation, group polls, attachments, and voice-message content, which may be stored in encrypted form where applicable;
 - encrypted attachments and encrypted voice-message files you choose to upload;
+- nicknames and messages you send in Global Chat rooms, which are not stored on our servers (see Section 4.3);
 - support or legal/privacy request content you send to us;
-- recovery-key and device-transfer inputs you voluntarily use.
+- recovery-key and device-transfer inputs you voluntarily use;
+- link-based contact or group join codes you generate or redeem.
 
-We use third-party service providers to deliver one-time passwords (OTP) and related verification services. Your phone number may be shared with these providers solely for authentication, verification, and security purposes.
+We use third-party service providers to deliver one-time passwords (OTP) and related verification services by email. Your email address may be shared with these providers solely for authentication, verification, and security purposes.
+
+Quix Chat previously supported phone-number-based sign-in and account recovery. That path has been fully retired: phone numbers are no longer collected, are no longer used to authenticate or recover any account, and are no longer shared with SMS/OTP providers.
 
 ### 3.2 Information generated through use of the Services
 
@@ -72,6 +79,7 @@ We may collect:
 - registered-device records, trust state, and device labels;
 - notification events, push-token registration state, push-platform details, and badge-count state;
 - voice/video call metadata needed to establish and manage calling sessions;
+- contact re-pairing history and link-based join/invite metadata, such as code expiry and usage limits;
 - security logs, fraud-prevention logs, abuse-prevention logs, operational telemetry, and error diagnostics.
 
 ### 3.3 Information from your device
@@ -92,29 +100,41 @@ Quix Chat asks for device permissions through the operating system. If you deny 
 We may receive information about you from:
 
 - users who add or label you as a contact;
-- users who invite you to conversations, groups, or calls;
+- users who invite you to conversations, groups, Stations, or calls;
 - other users who report abuse, spam, or policy violations;
 - app stores, device platforms, and infrastructure providers that return diagnostic or operational information.
 
-## 4. End-to-End Encryption and Server Storage
+## 4. Encryption and Server Storage
 
-Quix Chat encrypts direct message payloads on the client before they are stored on the backend. Encrypted attachments and encrypted voice-message files are also prepared locally before upload. This means the backend stores ciphertext and related metadata, not plain-text copies of those messages or files.
+Quix Chat uses different encryption models for different features, described below. Where we say a feature is "end-to-end encrypted," we mean the backend never has access to a key capable of decrypting that content. Where content is described as "encrypted at rest" without the end-to-end description, our backend infrastructure retains the technical ability to derive the relevant key, even though we do not do so as a matter of routine operations.
 
-Quix Chat also uses:
+### 4.1 Direct Messages and Private Storage
 
-- per-conversation encryption keys;
-- locally stored device keys;
-- device-to-device wrapping for secure key transfer;
-- optional recovery-key-based trust flows;
-- encrypted transfer bundles when moving account access to a new trusted device.
+Direct message content, encrypted attachments, and encrypted voice-message files sent in one-to-one chats are encrypted on the client before they are stored on the backend, using a key derived from information exchanged only between the two participating devices. The backend stores ciphertext, not plain-text copies of this content, and does not hold a key capable of decrypting it.
 
-Important limits:
+Quix Chat also offers an optional private storage feature for certain content you choose to keep, protected using per-device key wrapping and, if you enable it, an additional PIN-based safeguard. As with direct messages, the backend does not hold a key capable of decrypting this content.
 
-- metadata such as timestamps, sender/recipient/account identifiers, delivery state, call state, and group structure are still processed on the backend;
+### 4.2 Groups, Subgroups, and Station Channels
+
+Group chats, subgroups, and Station channels (including Station video posts and any attachments sent within them) are also encrypted before storage. However, unlike direct messages, the encryption key for this content is derived deterministically from the conversation itself, rather than from a secret known only to participating devices. This means our backend retains the technical ability to derive the key for this content, even though we do not do so as a matter of routine operations, and this content should not be understood to carry the same end-to-end confidentiality guarantee as direct messages. Quix Chat discloses this distinction inside the app itself wherever these features are used.
+
+### 4.3 Global Chat Rooms
+
+Global Chat rooms are public or semi-public, channel-style spaces. Messages and nicknames sent in Global Chat rooms are relayed in real time and are not encrypted and are not stored on our servers; we do not retain a server-side copy of Global Chat message content. A local copy may remain on your own device for a limited period after a conversation thread ends, for your convenience. Because Global Chat content is not persisted server-side, some safety and moderation tools available elsewhere in the Services work differently for Global Chat; see Section 7.7.
+
+### 4.4 Group Polls and Station Polls
+
+Poll questions and answer options created in group chats are stored in readable, non-encrypted form on our backend, consistent with our general approach to server-readable, user-generated metadata described in Section 7.2, and are subject to the same proactive content filtering described there. Individual votes are also stored on our backend and are not encrypted.
+
+### 4.5 Calls
+
+Voice and video calls are transmitted using secure real-time communication protocols; see Section 5 for details on call-related processing.
+
+### 4.6 Limits That Apply Regardless of Encryption Model
+
+- metadata such as timestamps, sender/recipient/account identifiers, delivery state, call state, and group or channel structure is still processed on the backend;
 - if you communicate with another user, that user can still copy, screenshot, forward, record, or disclose what you send;
 - if you report content, lawfully disclose content, or share information with third parties, encryption does not prevent that onward disclosure.
-
-End-to-end encryption applies to direct messages and supported media flows. Voice and video calls are transmitted using secure real-time communication protocols. Depending on configuration, calls may not use the exact same end-to-end encryption model as messaging, and we recommend describing call security in product materials consistently with the technical implementation in effect at the time.
 
 ## 5. Calls
 
@@ -130,15 +150,19 @@ Media transport for calling is handled through our real-time communications vend
 
 ## 6. Ads and Monetization
 
-Quix Chat may use advertising, but only in selected placements configured from the backend. As currently designed, Quix Chat does not place ads inside the message stream of a direct conversation.
+Quix Chat may use advertising, but only in selected placements configured from the backend. As currently designed, Quix Chat does not place ads inside the message stream of conversation in direct and group chat.
 
 Potential placements include:
 
-- first-card native ads in certain list surfaces;
-- selected scrolled list positions;
+- first-card native ads in certain list surfaces, such as chats, contacts, and groups lists;
+- selected scrolled list positions within those lists;
+- native ad placements within a group or Station conversation's side panels (such as a member list or rooms list), separate from the message thread itself;
 - app-open ads;
-- interstitial or rewarded ads tied to optional flows;
-- small banner placements on certain video-call screens.
+- interstitial ads tied to certain optional account actions;
+- rewarded ads tied to optional flows, such as unlocking certain message, contact, or device-management actions;
+- small banner placements on certain voice/video-call screens.
+
+Quix Chat does not place ads inside the body of any message thread of direct chat and group chat.
 
 Advertising is governed by:
 
@@ -150,11 +174,11 @@ If advertising is disabled globally in the backend, no individual placement shou
 
 Depending on your region, device platform, and consent choices, Quix Chat may request or honor advertising preferences, including whether ads may be personalized.
 
-We do not use the content of your messages, calls, voice messages, or attachments to personalize advertising.
+We do not use the content of your messages, calls, voice messages, or attachments in direct chats or group chats to personalize advertising.
 
 ## 7. Safety, Moderation, and Prohibited Content
 
-Quix Chat includes user-generated content, private messaging, groups, avatars, profile fields, and related metadata. We use safety and moderation controls to reduce abuse, support legal compliance, and protect users.
+Quix Chat includes user-generated content, private messaging, groups, Stations, Global Chat rooms, avatars, profile fields, and related metadata. We use safety and moderation controls to reduce abuse, support legal compliance, and protect users.
 
 ### 7.1 Prohibited content and conduct
 
@@ -177,6 +201,8 @@ Quix Chat applies proactive filtering to server-readable user-generated surfaces
 - group names;
 - room or subgroup names;
 - group descriptions;
+- Station names and descriptions;
+- group poll questions and answer options;
 - other server-readable metadata fields that we determine require safety review.
 
 When filtering rules are triggered, Quix Chat may block the attempted save, log the event for abuse-prevention or moderation purposes, and require the user to choose different content before continuing.
@@ -193,7 +219,7 @@ Instead, private direct-message safety is supported through:
 - moderation review and account or group enforcement when reports are validated;
 - backend logging and enforcement for safety events such as blocks, reports, and related actions.
 
-This distinction does not mean private abuse is permitted. It reflects the product’s encryption model and the technical limits that follow from it.
+This distinction does not mean private abuse is permitted. It reflects the product's encryption model and the technical limits that follow from it.
 
 ### 7.4 Group entry acknowledgements
 
@@ -217,6 +243,17 @@ Moderation evidence and related safety records may be retained for up to 28 days
 
 If a report results in account or group enforcement, certain related records may be retained longer where reasonably necessary to document the action taken, prevent repeat abuse, or comply with law.
 
+Because Global Chat message content is not stored on our servers, this retention section does not apply to ordinary Global Chat message content; moderation actions taken in response to a report (such as a block or restriction) are still recorded as described in Section 7.5.
+
+### 7.7 Global Chat Rooms — Safety Limitations
+
+Global Chat rooms are designed as ephemeral, real-time spaces and are not persisted on our backend (see Section 4.3). As with encrypted direct messages, we do not have server-side access to Global Chat message content to review it directly. As a result:
+
+- nicknames used in Global Chat rooms are validated for basic formatting on your device, but are not currently screened against the server-side content-filtering system used for other server-readable fields such as group and Station names;
+- reporting in Global Chat works the same way it does for encrypted direct messages: you can report a user or submit screenshots or other evidence through in-app reporting, which our moderation team reviews and acts on, rather than Quix Chat proactively scanning message content.
+
+We are working on strengthening safety tooling for Global Chat, including server-side review mechanisms appropriate to its ephemeral design. In the meantime, we encourage users to use available blocking and reporting controls and to avoid sharing sensitive personal information in Global Chat rooms.
+
 ## 8. How We Use Personal Data
 
 We use personal data to:
@@ -224,7 +261,7 @@ We use personal data to:
 - create and secure your account;
 - authenticate sign-in and account recovery;
 - route you to the correct backend region;
-- deliver messaging, calling, groups, subgroups, and attachment features;
+- deliver messaging, calling, groups, subgroups, Station channels, Global Chat rooms, group polls, and attachment features;
 - manage device trust, recovery, and encrypted transfer workflows;
 - provide customer support and respond to legal/privacy requests;
 - detect abuse, spam, fraud, suspicious behavior, and security incidents;
@@ -258,7 +295,7 @@ We may share personal data with:
 - law enforcement, regulators, courts, or advisors when required by law or needed to protect rights and safety;
 - a successor entity in the event of a merger, acquisition, restructuring, financing, or asset transfer, subject to applicable law.
 
-Quix Chat does not position itself as part of a large cross-service social advertising ecosystem. Compared with Meta-operated WhatsApp, Quix Chat is designed to keep data sharing narrower and product-specific. Compared with Telegram’s cloud-chat model, Quix Chat is designed to keep direct message content encrypted before backend storage rather than relying on server-readable cloud chats as the default private-chat model.
+Quix Chat does not position itself as part of a large cross-service social advertising ecosystem. Compared with Meta-operated WhatsApp, Quix Chat is designed to keep data sharing narrower and product-specific. Compared with Telegram's cloud-chat model, Quix Chat is designed to keep direct message content encrypted before backend storage rather than relying on server-readable cloud chats as the default private-chat model.
 
 ## 11. International Transfers
 
@@ -281,11 +318,13 @@ We retain data only for as long as reasonably necessary for the purposes describ
 - while your account is active;
 - while content or metadata is needed to provide the service;
 - while records are needed for security, dispute resolution, audits, or legal obligations;
-- until a configured expiration or deletion job applies, such as for expiring voice-message files.
+- until a configured expiration or deletion job applies — for example, expiring voice-message files, Station video posts (automatically removed within 72 hours of posting), or certain image attachments (removed on a routine automated schedule).
+
+Global Chat room content is not retained on our servers at all, as described in Section 4.3.
 
 When you delete your account, we will delete or de-identify data according to our retention rules and legal obligations. Some data may persist longer in logs, backups, legal records, or records needed to defend legal claims or prevent abuse.
 
-## 12. Your Rights
+## 13. Your Rights
 
 Depending on your jurisdiction, you may have the right to:
 
@@ -353,9 +392,9 @@ We use technical and organizational safeguards appropriate to the risk, includin
 - backend feature flags and rollout controls;
 - deletion and expiry jobs for selected data classes.
 
-We also implement safeguards designed to minimize unnecessary access to sensitive account identifiers, including limiting the use of phone numbers to authentication and security purposes and using internal identifiers for service operations wherever possible.
+We also implement safeguards designed to minimize unnecessary access to sensitive account identifiers, including limiting authentication-related data to what is needed for account security and using internal identifiers for service operations wherever possible.
 
-No system can guarantee absolute security. You are responsible for securing your device, account access, SIM/phone number, recovery key, and any backups or screenshots you make.
+No system can guarantee absolute security. You are responsible for securing your device, account access, email account, recovery key, and any backups or screenshots you make.
 
 ## 17. Changes to this Privacy Policy
 
@@ -459,11 +498,11 @@ These Terms and the Privacy Policy are provided in English. Translations may be 
 <br><br><br>
 
 # Quix Chat Terms of Use
-<sub>Version TOU-2026-04-13_v01 r1</sub>
+<sub>Version TOU-2026-07-20_v01</sub>
 
 <br>
-Effective date: April 13, 2026
-Last updated: April 13, 2026
+Effective date: July 20, 2026
+Last updated: July 20, 2026
 
 These Terms of Use ("Terms") govern your access to and use of Quix Chat and related services, software, and features (the "Services").
 
@@ -496,12 +535,15 @@ If you are using the Services on behalf of an organization, you represent that y
 
 Quix Chat is a privacy-first messaging platform that may include:
 
-- phone-number-based authentication;
+- email-based authentication;
 - contact pairing and direct chats;
 - encrypted direct messaging;
 - encrypted attachments and encrypted voice messages;
 - voice and video calling;
-- groups and subgroups;
+- groups, subgroups, and broadcast-style Station channels, including Station video posts;
+- ephemeral Global Chat rooms;
+- group polls;
+- link-based contact and group joining, and multi-slot contact re-pairing;
 - device-trust, recovery-key, and account-transfer features;
 - backend-controlled announcements, updates, and advertising placements.
 
@@ -513,15 +555,15 @@ Certain features may be subject to additional terms, age restrictions, or usage 
 
 You are responsible for:
 
-- keeping your device, SIM, phone number, and account access secure;
+- keeping your device, email account, and account access secure;
 - providing accurate and current account information where required;
 - maintaining control of your recovery key and trusted devices;
-- reviewing access when you change phone number, change devices, or lose device control.
+- reviewing access when you change your email address, change devices, or lose device control.
 
 You must not:
 
 - impersonate another person or entity;
-- create accounts using a phone number you do not control;
+- create accounts using an email address you do not control;
 - share recovery keys or access credentials irresponsibly;
 - use the Services to evade trust, safety, or access controls.
 
@@ -556,7 +598,7 @@ You represent that:
 
 ## 7. Encryption, Calls, and Technical Limits
 
-Quix Chat uses client-side encryption for supported direct-message and media flows. However:
+Quix Chat uses client-side encryption for supported direct-message, private-storage, and media flows. Group chats, subgroups, and Station channels use a different encryption model with different confidentiality guarantees, and Global Chat rooms are not encrypted or stored server-side at all, each as described in the Privacy Policy. However:
 
 - metadata is still processed to operate the Services;
 - other users can disclose what you send;
@@ -584,7 +626,7 @@ We may provide tools to report abuse, block users, mute users, or restrict inter
 
 Quix Chat may show ads or sponsored placements in selected product surfaces, subject to backend configuration, consent requirements, and applicable law.
 
-Quix Chat is designed not to place ads inside the direct message thread itself. Ads may, however, appear in selected lists, support surfaces, app-open moments, or certain optional flows if enabled.
+Quix Chat is designed not to place ads inside the message thread of direct chat and group chat. Ads may, however, appear in selected lists, conversation side-panels, support surfaces, app-open moments, or certain optional flows if enabled.
 
 If Quix Chat uses rewarded ads for optional actions:
 
@@ -647,7 +689,7 @@ We do not warrant that:
 
 To the maximum extent permitted by law, Quix Chat and its affiliates, officers, employees, contractors, licensors, and service providers will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of profits, revenues, goodwill, data, business, or opportunity, arising out of or related to the Services or these Terms.
 
-To the maximum extent permitted by law, Quix Chat’s aggregate liability for claims arising from or related to the Services will not exceed the greater of:
+To the maximum extent permitted by law, Quix Chat's aggregate liability for claims arising from or related to the Services will not exceed the greater of:
 
 - the amount you paid us for the Services in the twelve months before the event giving rise to the claim; or
 - USD $100.
@@ -692,5 +734,3 @@ For legal, support, or Terms-related questions:
 ## Language
 
 These Terms and the Privacy Policy are provided in English. Translations may be provided for convenience. In the event of any conflict or inconsistency between a translated version and the English version, the English version will prevail to the extent permitted by applicable law.
-
-

@@ -1,12 +1,12 @@
 # QUIX CHAT PRIVACY POLICY AND QUIX CHAT TERMS OF USE
 <br><br>
 # Quix Chat Privacy Policy
-<sub>Version PP-2026-10-26_v01 r1</sub>
+<sub>Version PP-2026-10-31_v01 r1</sub>
 
 <br>
-Effective date: October 26, 2026
+Effective date: October 31, 2026
 
-Last updated: October 26, 2026
+Last updated: October 31, 2026
 
 
 This Privacy Policy explains how Quix Chat processes personal data when you use the Quix Chat mobile application, related websites, support channels, and backend services (together, the "Services").
@@ -112,9 +112,9 @@ Quix Chat uses different encryption models for different features, described bel
 
 Direct message content, encrypted attachments, encrypted voice-message files, and encrypted video messages sent in one-to-one chats are encrypted on the client before they are stored on the backend, using a key derived from information exchanged only between the two participating devices. The backend stores ciphertext, not plain-text copies of this content, and does not hold a key capable of decrypting it.
 
-**Video messages.** You can send short video messages (up to 16 seconds) in one-to-one chats. Videos are encrypted on your device with the same chat key as your other direct messages before they are uploaded; we store only the encrypted file and the metadata needed to deliver it, such as its length, file size, timestamps, and whether it was sent as view-once. A video message becomes unavailable 72 hours after it is sent, and the encrypted file is then deleted from our servers by an automated cleanup job.
+**Video messages.** You can send short video messages (up to 16 seconds) in one-to-one chats. Videos are encrypted on your device with the same chat key as your other direct messages before they are uploaded; we store only the encrypted file and the metadata needed to deliver it, such as its length, file size, timestamps, and whether it was sent as view-once. A video message becomes unavailable 7 days after it is sent, and the encrypted file is then deleted from our servers by an automated cleanup job.
 
-**View once.** You can send a photo or video as "view once." The recipient can open it one time. When the recipient opens it, the encrypted file is deleted from our servers and cannot be replayed in the app. A view-once item that is not opened expires after [2 hours] and is then deleted from our servers by an automated cleanup job. View once limits how long content is available in the app, but it cannot prevent every form of capture. On supported Android devices, screenshots are blocked while a view-once item is open. On iOS, the app hides the content while screen recording is detected and shows a warning when a screenshot is taken, but iOS does not allow screenshots to be blocked. No setting can stop someone from photographing the screen with another device. A copy of what you send may also remain on your own device.
+**View once.** You can send a photo or video as "view once." The recipient can open it one time. When the recipient opens it, the encrypted file is deleted from our servers and cannot be replayed in the app. A view-once item that is not opened expires after 3 hours and is then deleted from our servers by an automated cleanup job. View once limits how long content is available in the app, but it cannot prevent every form of capture. On supported Android devices, screenshots are blocked while a view-once item is open. On iOS, the app hides the content while screen recording is detected and shows a warning when a screenshot is taken, but iOS does not allow screenshots to be blocked. No setting can stop someone from photographing the screen with another device. A copy of what you send may also remain on your own device.
 
 Quix Chat also offers an optional private storage feature for certain content you choose to keep, protected using per-device key wrapping and, if you enable it, an additional PIN-based safeguard. As with direct messages, the backend does not hold a key capable of decrypting this content.
 
@@ -326,7 +326,7 @@ We retain data only for as long as reasonably necessary for the purposes describ
 - while your account is active;
 - while content or metadata is needed to provide the service;
 - while records are needed for security, dispute resolution, audits, or legal obligations;
-- until a configured expiration or deletion job applies — for example, expiring voice-message files, direct-chat video messages and Station video posts (unavailable 72 hours after sending and then deleted by an automated job), view-once photos and videos (deleted from our servers when opened, or after [2 hours] if never opened), or certain image attachments (removed on a routine automated schedule).
+- until a configured expiration or deletion job applies — for example, voice-message files (unavailable 72 hours after sending), direct-chat video messages and Station video posts (unavailable 7 days after sending), and image attachments in chats, groups, subgroups, Station channels, and post comments (unavailable 60 days after sending), each of which is then deleted from our servers by an automated job; and view-once photos and videos (deleted from our servers when opened, or after 3 hours if never opened).
 
 Global Chat room content is not retained on our servers at all, as described in Section 4.3.
 

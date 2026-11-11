@@ -1,17 +1,17 @@
 # QUIX CHAT PRIVACY POLICY AND QUIX CHAT TERMS OF USE
 <br><br>
 # Quix Chat Privacy Policy
-<sub>Version PP-2026-10-26_v01 r1</sub>
+<sub>Version PP-2026-11-09_v01 r1</sub>
 
 <br>
-Effective date: October 26, 2026
+Effective date: November 9, 2026
 
-Last updated: October 26, 2026
+Last updated: November 9, 2026
 
 
 This Privacy Policy explains how Quix Chat processes personal data when you use the Quix Chat mobile application, related websites, support channels, and backend services (together, the "Services").
 
-Quix Chat is a privacy-first messaging product built around email-based sign-in, device trust, encrypted direct messaging, encrypted attachments, voice messages, and short video messages (including view-once photos and videos), optional voice and video calling, groups, subgroups, broadcast-style Station channels, ephemeral Global Chat rooms, group polls, and backend-controlled advertising surfaces outside core message threads.
+Quix Chat is a privacy-first messaging product built around email-based sign-in, device trust, encrypted direct messaging, encrypted attachments, voice messages, short video messages (including view-once photos and videos), PDF documents in one-to-one chats, link previews, optional voice and video calling, groups, subgroups, broadcast-style Station channels, ephemeral Global Chat rooms, group polls, and backend-controlled advertising surfaces outside core message threads.
 
 If you have questions about this Privacy Policy, contact:
 
@@ -61,6 +61,7 @@ We may collect:
 - contact labels you assign inside the app;
 - content you choose to send through the Services, including messages, reactions, replies, group and Station participation, group polls, attachments, and voice-message content, which may be stored in encrypted form where applicable;
 - encrypted attachments and encrypted voice-message files you choose to upload;
+- PDF documents you choose to send in one-to-one chats, including the file's name and size, which are encrypted on your device before upload (see Section 4.1);
 - nicknames and messages you send in Global Chat rooms, which are not stored on our servers (see Section 4.3);
 - support or legal/privacy request content you send to us;
 - recovery-key and device-transfer inputs you voluntarily use;
@@ -88,7 +89,7 @@ Depending on your permissions and feature use, Quix Chat may access:
 
 - microphone access for voice messages, video messages, voice calls, and video calls;
 - camera access for video messages, video calls, and avatars;
-- photo library or file-picker access for attachments and avatars;
+- photo library or file-picker access for attachments and avatars. When you attach a PDF, you pick a single file through your device's built-in file picker; Quix Chat receives only the file you select and does not browse or access your other files or device storage;
 - contact access if you choose to sync or use contact-based features;
 - notification permissions;
 - approximate location inferred from IP or regional routing where needed for compliance, fraud prevention, or service routing.
@@ -112,9 +113,11 @@ Quix Chat uses different encryption models for different features, described bel
 
 Direct message content, encrypted attachments, encrypted voice-message files, and encrypted video messages sent in one-to-one chats are encrypted on the client before they are stored on the backend, using a key derived from information exchanged only between the two participating devices. The backend stores ciphertext, not plain-text copies of this content, and does not hold a key capable of decrypting it.
 
-**Video messages.** You can send short video messages (up to 16 seconds) in one-to-one chats. Videos are encrypted on your device with the same chat key as your other direct messages before they are uploaded; we store only the encrypted file and the metadata needed to deliver it, such as its length, file size, timestamps, and whether it was sent as view-once. A video message becomes unavailable 72 hours after it is sent, and the encrypted file is then deleted from our servers by an automated cleanup job.
+**Video messages.** You can send short video messages (up to 16 seconds) in one-to-one chats. Videos are encrypted on your device with the same chat key as your other direct messages before they are uploaded; we store only the encrypted file and the metadata needed to deliver it, such as its length, file size, timestamps, and whether it was sent as view-once. A video message becomes unavailable 7 days after it is sent, and the encrypted file is then deleted from our servers by an automated cleanup job.
 
-**View once.** You can send a photo or video as "view once." The recipient can open it one time. When the recipient opens it, the encrypted file is deleted from our servers and cannot be replayed in the app. A view-once item that is not opened expires after [2 hours] and is then deleted from our servers by an automated cleanup job. View once limits how long content is available in the app, but it cannot prevent every form of capture. On supported Android devices, screenshots are blocked while a view-once item is open. On iOS, the app hides the content while screen recording is detected and shows a warning when a screenshot is taken, but iOS does not allow screenshots to be blocked. No setting can stop someone from photographing the screen with another device. A copy of what you send may also remain on your own device.
+**View once.** You can send a photo or video as "view once." The recipient can open it one time. When the recipient opens it, the encrypted file is deleted from our servers and cannot be replayed in the app. A view-once item that is not opened expires after 3 hours and is then deleted from our servers by an automated cleanup job. View once limits how long content is available in the app, but it cannot prevent every form of capture. On supported Android devices, screenshots are blocked while a view-once item is open. On iOS, the app hides the content while screen recording is detected and shows a warning when a screenshot is taken, but iOS does not allow screenshots to be blocked. No setting can stop someone from photographing the screen with another device. A copy of what you send may also remain on your own device.
+
+**PDF documents. **You can send PDF documents of up to 5 MB in one-to-one chats. A PDF is encrypted on your device with the same chat key as your other direct messages before it is uploaded. The file's name and size are sent inside the encrypted message, and the encrypted file is stored under a randomly generated name, so our servers cannot read the document, its title, or its contents. We store only the encrypted file and the metadata needed to deliver it, such as its stored size and timestamps. When the recipient opens a PDF, it is decrypted on their device and shown in the device's built-in PDF viewer; Quix Chat does not read, scan, or render the document's contents itself. PDF documents follow the same automated retention schedule as image attachments (see Section 12). PDFs can contain links or content from unknown sources — only open documents from people you trust.
 
 Quix Chat also offers an optional private storage feature for certain content you choose to keep, protected using per-device key wrapping and, if you enable it, an additional PIN-based safeguard. As with direct messages, the backend does not hold a key capable of decrypting this content.
 
@@ -140,6 +143,15 @@ Voice and video calls are transmitted using secure real-time communication proto
 - if you communicate with another user, that user can still copy, screenshot, forward, record, or disclose what you send;
 - if you report content, lawfully disclose content, or share information with third parties, encryption does not prevent that onward disclosure. When you choose to attach a direct-chat video to a report, your device decrypts that video and sends a readable copy to our moderation team, as described in Section 7.3.
 
+### 4.7 Link Previews
+
+When you type or paste a web link into a message, Quix Chat may show a preview of that page — typically its title, a short description, a small image, and the site's address.
+
+- **The preview is created on your device, not on our servers.** While you are writing the message, your device contacts the linked website directly to read this information, in the same way a web browser would. The website therefore receives the standard information any web request carries, such as your IP address and the time of the request. Quix Chat does not send the link to our servers to generate the preview. 
+- **The preview travels inside your message.** It is protected in the same way as the rest of that message: end-to-end encrypted in one-to-one chats (Section 4.1), and encrypted under the group model in groups, subgroups, and Station channels (Section 4.2).
+- **Recipients do not contact the website.** People who receive your message see the preview you sent; their devices do not contact the linked website unless they choose to open the link.
+- **You stay in control.** You can remove the preview before sending, and the message is then sent without it. Previews are only generated for links you type or paste yourself.
+- **Previews may be inaccurate or out of date.** A preview shows what the website published at the time the message was sent. The website may change afterward, and a page can describe itself inaccurately. The address shown on a preview is taken from the link itself. Quix Chat does not review, verify, or endorse linked websites. Opening a link takes you to the website as it is now, which is governed by that website's own terms and privacy practices.
 ## 5. Calls
 
 Quix Chat supports voice and video calling. To make calls work, we process call-related metadata such as:
@@ -305,6 +317,8 @@ We may share personal data with:
 
 Quix Chat does not position itself as part of a large cross-service social advertising ecosystem. Compared with Meta-operated WhatsApp, Quix Chat is designed to keep data sharing narrower and product-specific. Compared with Telegram's cloud-chat model, Quix Chat is designed to keep direct message content encrypted before backend storage rather than relying on server-readable cloud chats as the default private-chat model.
 
+Websites you link to: when you include a link in a message, your own device contacts that website to build the preview, as described in Section 4.7. Quix Chat does not share the link or your message with that website, and recipients' devices do not contact it on their behalf.
+
 ## 11. International Transfers
 
 Quix Chat uses regional infrastructure and may transfer data across borders where necessary to operate the Services, maintain security, or support users.
@@ -326,11 +340,11 @@ We retain data only for as long as reasonably necessary for the purposes describ
 - while your account is active;
 - while content or metadata is needed to provide the service;
 - while records are needed for security, dispute resolution, audits, or legal obligations;
-- until a configured expiration or deletion job applies — for example, expiring voice-message files, direct-chat video messages and Station video posts (unavailable 72 hours after sending and then deleted by an automated job), view-once photos and videos (deleted from our servers when opened, or after [2 hours] if never opened), or certain image attachments (removed on a routine automated schedule).
+- until a configured expiration or deletion job applies — for example, voice-message files (unavailable 72 hours after sending), direct-chat video messages and Station video posts (unavailable 7 days after sending), and image attachments in chats, groups, subgroups, Station channels, and post comments, as well as PDF documents in one-to-one chats (unavailable 60 days after sending), each of which is then deleted from our servers by an automated job; and view-once photos and videos (deleted from our servers when opened, or after 3 hours if never opened).
 
 Global Chat room content is not retained on our servers at all, as described in Section 4.3.
 
-When a conversation or message is deleted, for example when you delete a contact, erase a chat's history, or delete a group, the encrypted photos, voice messages, and videos attached to it are queued for deletion from our storage and removed by an automated job. As a backstop, our systems also remove any stored message media that is no longer linked to a message, normally within about 7 days.
+When a conversation or message is deleted, for example when you delete a contact, erase a chat's history, or delete a group, the encrypted photos, PDF documents, voice messages, and videos attached to it are queued for deletion from our storage and removed by an automated job. As a backstop, our systems also remove any stored message media that is no longer linked to a message, normally within about 7 days.
 
 When you delete your account, we will delete or de-identify data according to our retention rules and legal obligations. Some data may persist longer in logs, backups, legal records, or records needed to defend legal claims or prevent abuse.
 
@@ -508,11 +522,11 @@ These Terms and the Privacy Policy are provided in English. Translations may be 
 <br><br><br>
 
 # Quix Chat Terms of Use
-<sub>Version TOU-2026-10-26_v01 r1</sub>
+<sub>Version TOU-2026-11-09_v01 r1</sub>
 
 <br>
-Effective date: October 26, 2026
-Last updated: October 26, 2026
+Effective date: November 9, 2026
+Last updated: November 9, 2026
 
 These Terms of Use ("Terms") govern your access to and use of Quix Chat and related services, software, and features (the "Services").
 
@@ -618,6 +632,8 @@ Quix Chat uses client-side encryption for supported direct-message, private-stor
 - view-once and screenshot protections limit, but cannot fully prevent, capture of content by a recipient — for example, with another device;
 - if you are reported, the reporting user may share a readable copy of a video you sent them with our moderation team, as described in the Privacy Policy;
 - call quality and availability depend on networks, devices, vendors, permissions, and backend state.
+- link previews are generated automatically from the linked website at the time a message is sent, may be incomplete, inaccurate, or out of date, and are not reviewed or endorsed by Quix Chat; you open links at your own risk;
+- documents you receive (such as PDFs) come from other users, not from Quix Chat; open them only if you trust the sender, as documents can contain links or content from unknown sources.
 
 Quix Chat does not guarantee uninterrupted, error-free, or globally available service.
 
@@ -672,6 +688,8 @@ Some features may be unavailable if you do not install required updates.
 The Services may rely on third-party providers for infrastructure, notifications, calling, advertising, hosting, storage, authentication, crash reporting, analytics, or app distribution.
 
 Your use of third-party devices, app stores, carriers, or linked services may also be governed by third-party terms and policies. Quix Chat is not responsible for third-party services we do not control.
+
+Websites you open from links in messages, and the previews shown for them, are third-party content. Quix Chat does not control those websites and is not responsible for their content, availability, or practices.
 
 ## 12. Suspension and Termination
 
